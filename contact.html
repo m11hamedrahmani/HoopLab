@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HoopLab – Contact</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body class="d-flex flex-column min-vh-100 site-video-bg">
+  <video class="bg-video" autoplay muted loop playsinline>
+    <source src="assets/img/jaredtraining.mp4" type="video/mp4">
+  </video>
+  <div class="site-dark-overlay"></div>
+
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-transparent fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">HoopLab</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div id="nav" class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a href="programs.html" class="nav-link">Programs</a></li>
+          <li class="nav-item"><a href="workouts.html" class="nav-link">Workouts</a></li>
+          <li class="nav-item"><a href="calendar.html" class="nav-link">Plan</a></li>
+          <li class="nav-item"><a href="nutrition.html" class="nav-link">Nutrition</a></li>
+          <li class="nav-item"><a href="progress.html" class="nav-link">Progress</a></li>
+          <li class="nav-item"><a href="resources.html" class="nav-link">Resources</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="faq.html" class="nav-link">FAQ</a></li>
+          <li class="nav-item ms-lg-2"><a href="contact.html" class="btn btn-primary">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="flex-grow-1">
+    <section class="container py-5">
+      <h1 class="mb-4">Contact</h1>
+
+      <form id="contact-form" class="row g-3" onsubmit="return validateContact();">
+        <div class="col-md-6">
+          <label class="form-label">Name</label>
+          <input id="c-name" type="text" class="form-control" required>
+        </div>
+
+        <div class="col-md-6">
+          <label class="form-label">Email</label>
+          <input id="c-email" type="email" class="form-control" required>
+        </div>
+
+        <div class="col-md-6">
+          <label class="form-label">Goal</label>
+          <select id="c-goal" class="form-select" required>
+            <option value="">Choose…</option>
+            <option>Vertical</option>
+            <option>Speed</option>
+            <option>Mobility</option>
+          </select>
+        </div>
+
+        <div class="col-12">
+          <label class="form-label">Message</label>
+          <textarea id="c-msg" class="form-control" rows="5" required></textarea>
+        </div>
+
+        <div class="col-12 d-flex gap-2">
+          <button class="btn btn-primary" type="submit">Send</button>
+          <button class="btn btn-outline-secondary" type="reset">Reset</button>
+        </div>
+      </form>
+
+      <div id="contact-alert" class="alert alert-success mt-3 d-none">
+        Thanks! Your message has been recorded (demo).
+      </div>
+    </section>
+  </main>
+
+  <footer class="mt-auto py-4 bg-dark text-white">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+      <p class="mb-2 mb-md-0">© 2025 HoopLab</p>
+      <ul class="list-inline mb-0">
+        <li class="list-inline-item"><a class="link-light" href="faq.html">FAQ</a></li>
+        <li class="list-inline-item"><a class="link-light" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/script.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HoopLab – About</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="d-flex flex-column min-vh-100 site-video-bg">
+  <video class="bg-video" autoplay muted loop playsinline>
+    <source src="assets/img/jaredtraining.mp4" type="video/mp4">
+  </video>
+  <div class="site-dark-overlay"></div>
+
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-transparent fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">HoopLab</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div id="nav" class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a href="programs.html" class="nav-link">Programs</a></li>
+          <li class="nav-item"><a href="workouts.html" class="nav-link">Workouts</a></li>
+          <li class="nav-item"><a href="calendar.html" class="nav-link">Plan</a></li>
+          <li class="nav-item"><a href="nutrition.html" class="nav-link">Nutrition</a></li>
+          <li class="nav-item"><a href="progress.html" class="nav-link">Progress</a></li>
+          <li class="nav-item"><a href="resources.html" class="nav-link">Resources</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="faq.html" class="nav-link">FAQ</a></li>
+          <li class="nav-item ms-lg-2"><a href="contact.html" class="btn btn-primary">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="flex-grow-1">
+    <section class="container py-5 about-section">
+      <div class="row mb-5">
+        <div class="col-lg-7">
+          <h1 class="mb-3">About HoopLab</h1>
+          <p class="lead mb-3">
+            HoopLab was built like a real performance lab: every program is based on data from actual players,
+            not random “TikTok workouts”.
+          </p>
+          <p>
+            Before designing the vertical, speed and in-season plans, we ran a pilot study with guards and wings
+            (U17–U22) and tracked:
+          </p>
+          <ul>
+            <li>Vertical jump (CMJ &amp; approach), 10–20 m sprint and lane agility test</li>
+            <li>Session RPE (how hard each workout feels) and soreness</li>
+            <li>Training load across weeks to avoid overuse and keep players fresh for games</li>
+          </ul>
+          <p class="mb-0">
+            The result: repeatable, progressive templates you can plug straight into your week,
+            with clear priorities: jump higher, move faster, stay healthy.
+          </p>
+        </div>
+        <div class="col-lg-5">
+          <div class="card study-card h-100">
+            <div class="card-body">
+              <h5 class="card-title mb-3">Pilot Study Snapshot</h5>
+              <div class="row g-3 small">
+                <div class="col-6">
+                  <div class="about-stat">
+                    <span class="about-stat-label">Players</span>
+                    <span class="about-stat-value">32</span>
+                    <span class="about-stat-sub">Guards &amp; Wings</span>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="about-stat">
+                    <span class="about-stat-label">Duration</span>
+                    <span class="about-stat-value">12 weeks</span>
+                    <span class="about-stat-sub">Off + Pre-season</span>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="about-stat">
+                    <span class="about-stat-label">Avg. Vertical Gain</span>
+                    <span class="about-stat-value">+5.2 cm</span>
+                    <span class="about-stat-sub">CMJ</span>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="about-stat">
+                    <span class="about-stat-label">Sprint</span>
+                    <span class="about-stat-value">–0.18 s</span>
+                    <span class="about-stat-sub">10–20 m split</span>
+                  </div>
+                </div>
+              </div>
+              <p class="mt-3 mb-0 small text-muted">
+                Data used to shape volume, frequency and progression of each HoopLab program.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <h2 class="h4 mb-0">Coaching Staff</h2>
+        <span class="badge rounded-pill bg-light text-dark about-badge">Evidence-based coaching</span>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-6">
+          <div class="card coach-card h-100" role="button" data-bs-toggle="modal" data-bs-target="#coachMModal">
+            <div class="coach-photo position-relative mb-3">
+              <img src="assets/img/coach-amnay.jpeg" alt="Coach M" class="img-fluid w-100 rounded-4">
+              <div class="coach-photo-overlay">
+                <span>View profile</span>
+              </div>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title mb-1">Coach Amnay Hamdad</h5>
+              <p class="small mb-2 text-uppercase text-muted">Speed &amp; Agility · Ball-handling</p>
+              <p class="card-text small mb-0">
+                Builds acceleration, change of direction and on-court movement that actually translates to games.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="card coach-card h-100" role="button" data-bs-toggle="modal" data-bs-target="#coachRModal">
+            <div class="coach-photo position-relative mb-3">
+              <img src="assets/img/Coach-Noan.png" alt="Coach R" class="img-fluid w-100 rounded-4">
+              <div class="coach-photo-overlay">
+                <span>View profile</span>
+              </div>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title mb-1">Coach Noan Oberson</h5>
+              <p class="small mb-2 text-uppercase text-muted">Strength · Plyometrics</p>
+              <p class="card-text small mb-0">
+                Designs low-injury-risk jump and strength progressions with clear loading and deload weeks.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <a href="contact.html" class="btn btn-primary mt-4">Contact the staff</a>
+    </section>
+  </main>
+
+  <div class="modal fade" id="coachMModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content glass-modal">
+        <div class="modal-header">
+          <h5 class="modal-title">Coach Amnay Hamdad – Speed/Agility/Ball Handling</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <h6 class="mb-2">Studies &amp; Certifications</h6>
+          <ul class="small">
+            <li>BSc in Sport Science – focus on biomechanics &amp; sprint mechanics</li>
+            <li>Certified Strength &amp; Conditioning Specialist (CSCS)</li>
+            <li>EXOS Speed &amp; Agility Certification</li>
+          </ul>
+
+          <h6 class="mt-3 mb-2">Coaching Experience</h6>
+          <ul class="small">
+            <li>Speed coach for U18 &amp; U20 guards in high-performance academies</li>
+            <li>Designed acceleration &amp; COD progressions for youth national team camps</li>
+            <li>Worked with players returning from ankle &amp; knee sprains to rebuild confidence and movement quality</li>
+          </ul>
+
+          <h6 class="mt-3 mb-2">Research &amp; Field Work</h6>
+          <ul class="small mb-0">
+            <li>Analyzed sprint splits, deceleration metrics and movement efficiency using timing gates and video breakdown</li>
+            <li>Contributed data to the HoopLab pilot study to calibrate sprint and agility volumes per week</li>
+            <li>Special interest in: “how much speed work is enough” during in-season without killing your legs</li>
+          </ul>
+        </div>
+        <div class="modal-footer">
+          <a href="contact.html" class="btn btn-primary">Contact about Speed/Agility/Handling</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="coachRModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content glass-modal">
+        <div class="modal-header">
+          <h5 class="modal-title">Coach Noan Oberson – Strength &amp; Jump Development</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <h6 class="mb-2">Studies &amp; Certifications</h6>
+          <ul class="small">
+            <li>MSc in Strength &amp; Conditioning – specialization in plyometrics</li>
+            <li>FMS Level 1 (movement screening) and sports rehab coursework</li>
+            <li>Certified in velocity-based training (VBT) tools and jump profiling</li>
+          </ul>
+
+          <h6 class="mt-3 mb-2">Coaching Experience</h6>
+          <ul class="small">
+            <li>Strength &amp; jump coach for youth and semi-pro basketball clubs</li>
+            <li>Built off-season jump programs for wings and bigs focusing on posterior chain strength, landing mechanics and unilateral work</li>
+            <li>Supported players through in-season “maintenance” blocks to keep strength and explosiveness without heavy fatigue</li>
+          </ul>
+
+          <h6 class="mt-3 mb-2">Scientific &amp; Practical Work</h6>
+          <ul class="small mb-0">
+            <li>Collected CMJ and approach jump data weekly to track adaptation during the HoopLab prototype cycles</li>
+            <li>Worked on jump progressions combining strength, isometrics and low-volume high-intent plyos</li>
+            <li>Main interest: helping hoopers jump higher while keeping knees and backs happy long-term</li>
+          </ul>
+        </div>
+        <div class="modal-footer">
+          <a href="contact.html" class="btn btn-primary">Contact about Strength/Vertical</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="mt-auto py-4 bg-dark text-white">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+      <p class="mb-2 mb-md-0">© 2025 HoopLab</p>
+      <ul class="list-inline mb-0">
+        <li class="list-inline-item"><a class="link-light" href="faq.html">FAQ</a></li>
+        <li class="list-inline-item"><a class="link-light" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/script.js" defer></script>
+</body>
+</html>

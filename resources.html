@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HoopLab – Resources</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body class="d-flex flex-column min-vh-100 site-video-bg">
+  <video class="bg-video" autoplay muted loop playsinline>
+    <source src="assets/img/jaredtraining.mp4" type="video/mp4">
+  </video>
+  <div class="site-dark-overlay"></div>
+
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-transparent fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">HoopLab</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div id="nav" class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a href="programs.html" class="nav-link">Programs</a></li>
+          <li class="nav-item"><a href="workouts.html" class="nav-link">Workouts</a></li>
+          <li class="nav-item"><a href="calendar.html" class="nav-link">Plan</a></li>
+          <li class="nav-item"><a href="nutrition.html" class="nav-link">Nutrition</a></li>
+          <li class="nav-item"><a href="progress.html" class="nav-link">Progress</a></li>
+          <li class="nav-item"><a href="resources.html" class="nav-link">Resources</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="faq.html" class="nav-link">FAQ</a></li>
+          <li class="nav-item ms-lg-2"><a href="contact.html" class="btn btn-primary">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="flex-grow-1">
+    <section class="container py-5">
+      <h1 class="mb-4">Resources</h1>
+
+      <div class="mb-3">
+        <div class="d-flex gap-2 flex-wrap">
+          <button class="btn btn-sm btn-outline-secondary" onclick="filterTag('')">All</button>
+          <button class="btn btn-sm btn-outline-secondary" onclick="filterTag('recovery')">Mechanics</button>
+          <button class="btn btn-sm btn-outline-secondary" onclick="filterTag('mobility')">Mobility</button>
+          <button class="btn btn-sm btn-outline-secondary" onclick="filterTag('mindset')">Mindset</button>
+        </div>
+      </div>
+
+      <div id="resource-grid" class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col" data-tags="recovery">
+          <div class="card h-100 resource-card" data-pdf="assets/img/JumpMechanics.pdf">
+            <div class="card-body">
+              <h5 class="card-title">Jump Mechanics Mastery Guide</h5>
+              <p class="small text-muted">Learn the right way to jump to maximize your vertical and avoid injuries.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col" data-tags="mobility">
+          <div class="card h-100 resource-card" data-pdf="assets/img/Recovery.pdf">
+            <div class="card-body">
+              <h5 class="card-title">Optimal Recovery Guide</h5>
+              <p class="small text-muted">Stay fresh for games, get back to 100% for the next session.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col" data-tags="mindset">
+          <div class="card h-100 resource-card" data-pdf="assets/img/Mentality.pdf">
+            <div class="card-body">
+              <h5 class="card-title">The Explosive Athlete Mentality</h5>
+              <p class="small text-muted">Routines to reduce anxiety and build trust in your craft.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="mt-auto py-4 bg-dark text-white">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+      <p class="mb-2 mb-md-0">© 2025 HoopLab</p>
+      <ul class="list-inline mb-0">
+        <li class="list-inline-item"><a class="link-light" href="faq.html">FAQ</a></li>
+        <li class="list-inline-item"><a class="link-light" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <div class="modal fade" id="pdfModal" tabindex="-1" aria-labelledby="pdfModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+      <div class="modal-content bg-dark text-light">
+        <div class="modal-header border-0">
+          <h5 class="modal-title" id="pdfModalLabel">Resource</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-0">
+          <embed
+            id="pdfViewer"
+            src=""
+            type="application/pdf"
+            width="100%"
+            height="700px">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/script.js" defer></script>
+</body>
+</html>

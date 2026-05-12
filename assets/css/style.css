@@ -1,0 +1,1189 @@
+:root{
+  --brand:#0d6efd;
+  --accent:#ff7a00;
+}
+
+body{ background:#0d0d0d; }
+
+.card-title{ font-weight: 600; }
+
+.list-group .btn-move{ padding: .25rem .5rem; }
+
+.hero-video {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero-video-bg {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 130%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  z-index: 0;
+}
+
+.hero-overlay {
+  z-index: 2;
+}
+
+.hero-video::after {
+  content: "";
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.45);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.navbar-transparent {
+  background: transparent !important;
+  box-shadow: none !important;
+  transition: background 0.3s ease;
+}
+
+.navbar-transparent .nav-link {
+  color: white !important;
+  padding: 8px 14px;
+  border-radius: 4px;
+  transition: 0.25s ease;
+  font-weight: 500;
+}
+
+.navbar-transparent .nav-link:hover {
+  background: white !important;
+  color: black !important;
+  border-radius: 6px;
+}
+
+.navbar-transparent .btn-primary {
+  background: white !important;
+  color: black !important;
+  border: none;
+  font-weight: 600;
+}
+
+.navbar-transparent .btn-primary:hover {
+  background: #f0f0f0 !important;
+  color: black !important;
+}
+
+/* WORKOUTS PAGE BACKGROUND VIDEO */
+.workouts-video-bg {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Fullscreen background video */
+.workouts-video-bg .bg-video {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 130%;
+  transform: translate(-50%, -50%);
+  object-fit:cover;
+  z-index: 0;
+}
+
+/* Ensure all page content appears ABOVE video */
+.workouts-video-bg nav,
+.workouts-video-bg main,
+.workouts-video-bg footer {
+  position: relative;
+  z-index: 2;
+}
+
+/* Optional dark overlay to improve text readability */
+.workouts-video-bg::after {
+  content: "";
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.45);
+  z-index: 1;
+}
+
+.workouts-video-bg main {
+  padding-top: 90px;
+}
+
+.workouts-text-white h1,
+.workouts-text-white label {
+  color: white !important;
+}
+
+.modal-backdrop {
+  z-index: 3000 !important;
+}
+
+.modal {
+  z-index: 3001 !important;
+}
+
+/* ===== GLOBAL background video & overlay (clean layering) ===== */
+.site-video-bg {
+  position: relative;
+  overflow: hidden;
+  color: #f5f5f5;
+}
+
+/* Video at the very back */
+.site-video-bg .bg-video {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 130%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  z-index: -2 !important;
+}
+
+/* Dark overlay ABOVE video but BELOW everything else */
+.site-video-bg .site-dark-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.4);
+  z-index: 0 !important;
+  pointer-events: none;
+}
+
+/* Normal page content sits above overlay */
+.site-video-bg nav,
+.site-video-bg main,
+.site-video-bg footer {
+  position: relative;
+  z-index: 1 !important;
+}
+
+/* Text elements on dark background */
+.site-video-bg h1,
+.site-video-bg h2,
+.site-video-bg h3,
+.site-video-bg h4,
+.site-video-bg h5,
+.site-video-bg h6,
+.site-video-bg p,
+.site-video-bg label,
+.site-video-bg span,
+.site-video-bg li,
+.site-video-bg small {
+  color: #f5f5f5;
+}
+
+/* Links */
+.site-video-bg a {
+  color: #f0f0f0;
+}
+
+.site-video-bg a:hover {
+  color: #ffffff;
+}
+
+/* Fix Bootstrap components that default to white background */
+.site-video-bg .list-group-item,
+.programs-page .list-group-item,
+.calendar-page .list-group-item {
+  background: rgba(0,0,0,0.65) !important;
+  color: #ffffff !important;
+  border-color: rgba(255,255,255,0.25) !important;
+}
+
+.site-video-bg .table {
+  color: #f5f5f5;
+  background: rgba(0,0,0,0.6);
+}
+
+.site-video-bg .table th,
+.site-video-bg .table td {
+  border-color: rgba(255,255,255,0.25);
+}
+
+/* ====== GLOBAL GLASS EFFECT FOR CARDS ====== */
+.site-video-bg .card {
+  background: rgba(255, 255, 255, 0.10) !important; /* transparent white */
+  border: 1px solid rgba(255, 255, 255, 0.25) !important;
+  backdrop-filter: blur(12px) saturate(160%) !important;
+  -webkit-backdrop-filter: blur(12px) saturate(160%) !important;
+  border-radius: 16px !important;
+  color: white !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+}
+
+/* Card titles */
+.site-video-bg .card-title {
+  font-weight: 700;
+  color: white !important;
+}
+
+/* Text inside cards */
+.site-video-bg .card-text {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+/* ====== GLASS EFFECT FOR FORMS ====== */
+.site-video-bg .form-control,
+.site-video-bg .form-select {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border: 1px solid rgba(255, 255, 255, 0.25) !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+  color: white !important;
+  border-radius: 12px !important;
+}
+
+.site-video-bg .form-control::placeholder {
+  color: rgba(255,255,255,0.7) !important;
+}
+
+/* ====== GLASS EFFECT FILTER PANEL (Drill Library search area) ====== */
+.workouts-text-white .row.g-3 {
+  background: rgba(255, 255, 255, 0.07) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  backdrop-filter: blur(18px) !important;
+  -webkit-backdrop-filter: blur(18px) !important;
+  padding: 20px;
+  border-radius: 18px;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* ====== GLASS NAVBAR (TRANSPARENT) ====== */
+.navbar-transparent {
+  background: rgba(255, 255, 255, 0.05) !important;
+  backdrop-filter: blur(18px) !important;
+  -webkit-backdrop-filter: blur(18px) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15) !important;
+  z-index: 2000 !important;
+}
+
+/* Nav links */
+.navbar-transparent .nav-link {
+  color: white !important;
+  font-weight: 500;
+  transition: 0.25s ease;
+}
+
+/* Hover → white button effect */
+.navbar-transparent .nav-link:hover {
+  background: rgba(255,255,255,0.25) !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+  color: black !important;
+}
+
+/* Join button */
+.navbar-transparent .btn-primary {
+  background: rgba(255,255,255,0.8) !important;
+  backdrop-filter: blur(6px);
+  color: black !important;
+  border: none !important;
+}
+
+.navbar-transparent .btn-primary:hover {
+  background: rgba(255,255,255,1) !important;
+  color: black !important;
+}
+
+/* Mobile hamburger (toggler) icon always white */
+.navbar-transparent .navbar-toggler {
+  border-color: rgba(255,255,255,0.7);
+}
+
+.navbar-transparent .navbar-toggler-icon {
+  filter: invert(1); /* makes icon white */
+}
+
+/* ==========================
+   GLASS DRILL CARDS
+   ========================== */
+#drill-grid .card {
+  background: rgba(255, 255, 255, 0.10) !important;
+  border: 1px solid rgba(255, 255, 255, 0.25) !important;
+  backdrop-filter: blur(14px) saturate(160%) !important;
+  -webkit-backdrop-filter: blur(14px) saturate(160%) !important;
+  color: white !important;
+  border-radius: 18px !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+  transition: 0.35s ease;
+}
+
+/* Card Hover Glow */
+#drill-grid .card:hover {
+  background: rgba(255, 255, 255, 0.18) !important;
+  transform: translateY(-6px);
+  box-shadow: 0 12px 45px rgba(0, 0, 0, 0.55);
+}
+
+/* Drill Titles */
+#drill-grid .card-title {
+  color: white !important;
+  font-weight: 700 !important;
+}
+
+/* Drill text */
+#drill-grid .card-text {
+  color: rgba(255,255,255,0.85) !important;
+}
+
+/* Badge (difficulty) */
+#drill-grid .badge {
+  backdrop-filter: blur(4px) !important;
+  -webkit-backdrop-filter: blur(4px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+/* Drill buttons */
+#drill-grid .btn {
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+  color: white !important;
+  border-radius: 10px !important;
+  border: 1px solid rgba(255,255,255,0.4) !important;
+}
+
+/* Hover effects for buttons */
+#drill-grid .btn:hover {
+  background: rgba(255,255,255,0.2) !important;
+  color: black !important;
+}
+
+/* Style the tabs container */
+.nav-tabs {
+  border-bottom: 1px solid rgba(255,255,255,0.2) !important;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Base style for each tab button */
+.nav-tabs .nav-link {
+  color: white !important;
+  background: rgba(255,255,255,0.05) !important;
+  border: 1px solid rgba(255,255,255,0.2) !important;
+  padding: 10px 24px;
+  border-radius: 14px !important;
+  backdrop-filter: blur(12px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(12px) saturate(180%) !important;
+  transition: 0.25s ease;
+  font-weight: 600;
+}
+
+/* Hover effect */
+.nav-tabs .nav-link:hover {
+  background: rgba(255,255,255,0.15) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+}
+
+/* Active tab (selected) */
+.nav-tabs .nav-link.active {
+  background: rgba(255,255,255,0.25) !important;
+  border: 1px solid rgba(255,255,255,0.35) !important;
+  color: white !important;
+  box-shadow: 0 10px 32px rgba(0,0,0,0.4);
+  transform: translateY(-2px);
+}
+
+/* Animated underline (smooth) */
+.nav-tabs .nav-link.active::after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 60%;
+  margin: 6px auto 0;
+  background: var(--brand);
+  border-radius: 6px;
+  animation: tab-slide-in 0.35s ease forwards;
+}
+
+@keyframes tab-slide-in {
+  from { width: 0%; }
+  to { width: 60%; }
+}
+
+/* ===== WEEKLY PLANNER DRILL ITEMS (GLASS STYLE) ===== */
+.plan-drill {
+  background: rgba(255,255,255,0.10);
+  border: 1px solid rgba(255,255,255,0.25);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: white;
+  padding: 10px 14px;
+  margin-bottom: 10px;
+  border-radius: 14px;
+  cursor: grab;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.25s ease;
+}
+
+/* Hover effect */
+.plan-drill:hover {
+  background: rgba(255,255,255,0.18);
+  transform: translateY(-2px);
+}
+
+/* Icons inside drills */
+.plan-drill .move-btn {
+  cursor: pointer;
+  font-size: 18px;
+  opacity: 0.8;
+  transition: 0.2s;
+}
+
+.plan-drill .move-btn:hover {
+  opacity: 1;
+}
+
+/* When a drill is marked as done */
+.plan-drill-done {
+  opacity: 0.55;
+  text-decoration: line-through;
+}
+
+/* Drops zones */
+.day-column {
+  min-height: 200px;
+  padding: 10px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.day-column.drag-over {
+  background: rgba(255,255,255,0.18) !important;
+  border-color: rgba(255,255,255,0.45);
+}
+
+/* DAY COLUMNS WITH GLASS EFFECT */
+.glass-day {
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 16px;
+  padding: 15px;
+  backdrop-filter: blur(16px) saturate(160%) !important;
+  -webkit-backdrop-filter: blur(16px) saturate(160%) !important;
+  min-height: 250px;
+}
+
+/* --- Hard-set global layering --- */
+
+/* video at the very back */
+.site-video-bg .bg-video {
+  z-index: -2 !important;
+}
+
+/* dark overlay above video, still behind content + modal */
+.site-video-bg .site-dark-overlay {
+  z-index: 0 !important;
+}
+
+/* normal page content above overlay */
+.site-video-bg nav,
+.site-video-bg main,
+.site-video-bg footer {
+  position: relative;
+  z-index: 1 !important;
+}
+
+/* modal + backdrop way above everything */
+.modal-backdrop {
+  z-index: 3000 !important;
+}
+
+.modal {
+  z-index: 3001 !important;
+}
+
+/* --- Dark glass modal so text is visible --- */
+.modal-content {
+  background: rgba(0,0,0,0.85) !important;
+  color: #ffffff !important;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.25);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+.modal-header,
+.modal-footer {
+  border-color: rgba(255,255,255,0.2) !important;
+}
+
+.modal-title {
+  color: #ffffff !important;
+}
+
+/* Make the grey helper text actually visible on dark bg */
+.modal-body .text-muted {
+  color: rgba(255,255,255,0.7) !important;
+}
+
+/* Buttons inside modal */
+.modal-footer .btn-primary {
+  background: rgba(255,255,255,0.9) !important;
+  color: #000 !important;
+  border: none !important;
+}
+
+.modal-footer .btn-outline-secondary {
+  color: #ffffff !important;
+  border-color: rgba(255,255,255,0.6) !important;
+}
+
+.modal-footer .btn-outline-secondary:hover {
+  background: rgba(255,255,255,0.15) !important;
+}
+
+/* =============================================
+   PROGRAMS PAGE CUSTOM VIDEO BACKGROUND
+   ============================================= */
+.programs-video-bg {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Background video */
+.programs-video-bg .programs-video {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 130%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  z-index: -2;
+}
+
+/* Dark overlay for readability */
+.programs-video-bg::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.45);
+  z-index: -1;
+}
+
+/* Actual page content above */
+.programs-video-bg nav,
+.programs-video-bg main,
+.programs-video-bg footer {
+  position: relative;
+  z-index: 1;
+}
+
+/* ===========================================
+   PROGRAMS PAGE (programs.html) – ISOLATED
+   =========================================== */
+
+.programs-page {
+  position: relative;
+  background: #000;
+  color: #fff;
+  overflow: hidden;
+}
+
+/* Background video for programs page */
+.programs-bg-video {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 130%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  z-index: -2;
+}
+
+/* Soft dark overlay using gradient (no extra div in HTML) */
+.programs-page::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: radial-gradient(circle at top, rgba(0,0,0,0.5), rgba(0,0,0,0.9));
+  z-index: -1;
+}
+
+/* Content above background */
+.programs-page nav,
+.programs-page main,
+.programs-page footer {
+  position: relative;
+  z-index: 1;
+}
+
+/* Make headings + cards readable */
+.programs-content h1 {
+  color: #ffffff;
+}
+
+.programs-content .text-muted {
+  color: rgba(255,255,255,0.7) !important;
+}
+
+/* Glass cards for programs */
+.programs-card {
+  background: rgba(255,255,255,0.10);
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,0.25);
+  backdrop-filter: blur(16px) saturate(160%);
+  -webkit-backdrop-filter: blur(16px) saturate(160%);
+  color: #ffffff;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+  transition: 0.3s ease;
+}
+
+.programs-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255,255,255,0.18);
+  box-shadow: 0 12px 45px rgba(0,0,0,0.6);
+}
+
+/* Modal: dark glass */
+.programs-modal {
+  background: rgba(0,0,0,0.92) !important;
+  color: #ffffff !important;
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,0.25);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+.programs-modal .modal-header,
+.programs-modal .modal-footer {
+  border-color: rgba(255,255,255,0.2) !important;
+}
+
+.programs-modal .modal-title {
+  color: #ffffff !important;
+}
+
+.programs-modal .text-muted {
+  color: rgba(255,255,255,0.7) !important;
+}
+
+/* ===========================================
+   CALENDAR PAGE (calendar.html) – ISOLATED
+   =========================================== */
+
+.calendar-page {
+  position: relative;
+  background: #000;
+  color: #fff;
+  overflow: hidden;
+}
+
+/* Background video for calendar page */
+.calendar-bg-video {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 130%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  z-index: -2;
+}
+
+/* Soft dark overlay using pseudo-element */
+.calendar-page::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: radial-gradient(circle at top, rgba(0,0,0,0.5), rgba(0,0,0,0.92));
+  z-index: -1;
+}
+
+/* Ensure content is above bg */
+.calendar-page nav,
+.calendar-page main,
+.calendar-page footer {
+  position: relative;
+  z-index: 1;
+}
+
+/* Heading + text */
+.calendar-content h1 {
+  color: #ffffff;
+}
+
+.calendar-content .text-muted {
+  color: rgba(255,255,255,0.7) !important;
+}
+
+/* Glass cards in template tab */
+.calendar-card {
+  background: rgba(255,255,255,0.10);
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,0.25);
+  backdrop-filter: blur(16px) saturate(160%);
+  -webkit-backdrop-filter: blur(16px) saturate(160%);
+  color: #ffffff;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+}
+
+/* My Week – day columns */
+.calendar-day-wrapper {
+  background: rgba(255,255,255,0.07);
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,0.25);
+  backdrop-filter: blur(18px) saturate(170%);
+  -webkit-backdrop-filter: blur(18px) saturate(170%);
+  padding: 12px 12px 8px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+}
+
+.cal-day-title {
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+/* Drop zone for drills */
+.cal-day {
+  min-height: 160px;
+  padding: 6px;
+  border-radius: 12px;
+  background: rgba(0,0,0,0.35);
+  border: 1px dashed rgba(255,255,255,0.25);
+}
+
+/* Highlight when dragging over a day */
+.cal-day-over {
+  background: rgba(255,255,255,0.15) !important;
+  border-color: rgba(255,255,255,0.7) !important;
+}
+
+/* List inside each day */
+.cal-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+/* Individual drill item */
+.cal-drill {
+  background: rgba(255,255,255,0.12);
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.30);
+  padding: 8px 10px;
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: grab;
+  transition: 0.2s ease;
+}
+
+.cal-drill:hover {
+  background: rgba(255,255,255,0.20);
+  transform: translateY(-2px);
+}
+
+.cal-drill.dragging {
+  opacity: 0.4;
+}
+
+/* Visible "handle" on the right of each drill */
+.cal-drill-handle {
+  font-size: 18px;
+  opacity: 0.8;
+}
+
+/* =====================
+   ABOUT / COACHES PAGE
+   ===================== */
+
+.about-section h1 {
+  font-weight: 700;
+}
+
+.study-card {
+  background: rgba(255,255,255,0.10) !important;
+  border-radius: 18px !important;
+}
+
+.about-stat {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.20);
+}
+
+.about-stat-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  opacity: 0.8;
+}
+
+.about-stat-value {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.about-stat-sub {
+  font-size: 0.75rem;
+  opacity: 0.85;
+}
+
+.about-badge {
+  background: rgba(255,255,255,0.85) !important;
+  color: #111 !important;
+  font-size: 0.7rem;
+}
+
+/* Coach cards */
+.coach-card {
+  cursor: pointer;
+  transition: transform 0.35s ease, box-shadow 0.35s ease, background 0.35s ease;
+  border-radius: 20px !important;
+  overflow: hidden;
+}
+
+.coach-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 40px rgba(0,0,0,0.55);
+  background: rgba(255,255,255,0.16) !important;
+}
+
+/* Coach photo + overlay */
+.coach-photo img {
+  display: block;
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 18px;
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.coach-card:hover .coach-photo img {
+  transform: scale(1.06);
+  filter: brightness(1.08);
+}
+
+.coach-photo-overlay {
+  position: absolute;
+  inset: 0;
+  border-radius: 18px;
+  background: linear-gradient(
+    135deg,
+    rgba(13,110,253,0.15),
+    rgba(255,122,0,0.15)
+  );
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding: 14px 16px;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.coach-photo-overlay span {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  background: rgba(0,0,0,0.55);
+  padding: 6px 10px;
+  border-radius: 999px;
+}
+
+/* Show overlay on hover */
+.coach-card:hover .coach-photo-overlay {
+  opacity: 1;
+}
+
+/* Modal glass style for coaches */
+.glass-modal {
+  background: rgba(15, 15, 20, 0.92) !important;
+  border-radius: 18px !important;
+  border: 1px solid rgba(255,255,255,0.25) !important;
+  backdrop-filter: blur(22px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(22px) saturate(180%) !important;
+  color: white !important;
+}
+
+.glass-modal .modal-header {
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.glass-modal .modal-footer {
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.glass-modal .btn-close {
+  filter: invert(1);
+}
+
+body, html {
+  height: auto !important;
+  overflow-y: auto !important;
+}
+
+.site-video-bg {
+  overflow: visible !important;
+}
+
+main {
+  position: relative;
+  z-index: 2;
+  overflow: visible !important;
+}
+
+/* =====================
+   FAQ PAGE
+   ===================== */
+
+.faq-section h1 {
+  font-weight: 700;
+}
+
+.faq-accordion .accordion-item {
+  background: rgba(255,255,255,0.08) !important;
+  border-radius: 18px !important;
+  margin-bottom: 12px;
+  border: 1px solid rgba(255,255,255,0.20) !important;
+  overflow: hidden;
+  backdrop-filter: blur(18px) saturate(170%) !important;
+  -webkit-backdrop-filter: blur(18px) saturate(170%) !important;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.45);
+}
+
+.faq-accordion .accordion-item:last-of-type {
+  margin-bottom: 0;
+}
+
+.faq-accordion .accordion-button {
+  background: transparent !important;
+  color: #ffffff !important;
+  font-weight: 600;
+  padding: 14px 18px;
+  border: none;
+  box-shadow: none !important;
+}
+
+.faq-accordion .accordion-button::after {
+  filter: invert(1);
+}
+
+.faq-accordion .accordion-button:not(.collapsed) {
+  background: rgba(255,255,255,0.16) !important;
+}
+
+.faq-accordion .accordion-body {
+  font-size: 0.95rem;
+  color: rgba(255,255,255,0.9) !important;
+}
+
+.faq-accordion .accordion-body p {
+  margin-bottom: 0.6rem;
+}
+
+.faq-contact-btn {
+  padding-inline: 2.4rem;
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+/* =====================
+   HOME / INDEX PAGE
+   ===================== */
+
+.hero-home {
+  padding-top: 120px;
+  padding-bottom: 60px;
+}
+
+.hero-eyebrow {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  opacity: 0.85;
+}
+
+.hero-home h1 {
+  text-shadow: 0 8px 24px rgba(0,0,0,0.6);
+}
+
+.hero-kpi-row {
+  gap: 0.75rem;
+}
+
+.hero-kpi-card {
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: rgba(0,0,0,0.35);
+  border: 1px solid rgba(255,255,255,0.22);
+  font-size: 0.8rem;
+}
+
+.hero-kpi-label {
+  display: block;
+  opacity: 0.75;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  font-size: 0.7rem;
+}
+
+.hero-kpi-value {
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.hero-side-card {
+  background: rgba(255,255,255,0.10) !important;
+  border-radius: 20px !important;
+}
+
+/* Section titles */
+.section-title {
+  font-weight: 700;
+}
+
+.section-subtitle {
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+
+/* Program cards */
+.program-card .program-badge {
+  background: rgba(255,255,255,0.25);
+  color: #111;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* Drill preview */
+.drill-preview-card {
+  overflow: hidden;
+}
+
+.drill-preview-img {
+  height: 190px;
+  object-fit: cover;
+  border-bottom: 1px solid rgba(255,255,255,0.25);
+}
+
+/* Planner CTA */
+.planner-cta-card {
+  background: rgba(255,255,255,0.10) !important;
+  border-radius: 18px !important;
+}
+
+/* Protein referral block */
+.protein-referral-card {
+  display: block;
+  max-width: 360px;
+  width: 100%;
+}
+
+/* Glass style */
+.glass-ref-card {
+  background: rgba(255, 255, 255, 0.10);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(14px) saturate(160%);
+  -webkit-backdrop-filter: blur(14px) saturate(160%);
+  border-radius: 18px;
+  color: white !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.glass-ref-card:hover {
+  background: rgba(255, 255, 255, 0.18);
+  transform: translateY(-6px);
+  box-shadow: 0 12px 45px rgba(0,0,0,0.55);
+}
+
+/* =============================
+   PROTEIN IMAGE (HOVER SWAP)
+   ============================= */
+.protein-big-card {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.25);
+  backdrop-filter: blur(12px);
+  border-radius: 18px;
+  overflow: hidden;
+  max-width: 500px;
+  margin: 0 auto;
+  margin-top: 50px;
+  transition: transform 0.3s ease;
+}
+
+.protein-big-card:hover {
+  transform: translateY(-5px);
+}
+
+.protein-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+/* Image wrapper = keeps proportions, NEVER crops */
+.protein-img-wrapper {
+  width: 100%;
+  background: black; /* so image edges look clean */
+  border-radius: 14px 14px 0 0;
+}
+
+/* Actual image — shows FULL image always */
+.protein-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: opacity 0.25s ease;
+  display: block;
+}
+
+/* Hover switching effect */
+.protein-big-card:hover .protein-img {
+  opacity: 0;
+}
+
+.protein-big-card:hover .protein-img-wrapper {
+  background-image: url('../img/protein1.avif');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* ===== Resources hover effect ===== */
+.resource-card {
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+.resource-card:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.8);
+  border-color: #0d6efd; /* Bootstrap primary */
+}
+
+/* ===== Quiz steps (global) ===== */
+.quiz-step {
+  display: none;
+}
+
+.quiz-step.active {
+  display: block;
+}

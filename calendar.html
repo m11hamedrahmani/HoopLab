@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HoopLab – Weekly Planner</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="calendar-page d-flex flex-column min-vh-100">
+  <video class="calendar-bg-video" autoplay muted loop playsinline>
+    <source src="assets/img/jaredtraining.mp4" type="video/mp4">
+  </video>
+  <div class="calendar-dark-overlay"></div>
+
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-transparent fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">HoopLab</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div id="nav" class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a href="programs.html" class="nav-link">Programs</a></li>
+          <li class="nav-item"><a href="workouts.html" class="nav-link">Workouts</a></li>
+          <li class="nav-item"><a href="calendar.html" class="nav-link">Plan</a></li>
+          <li class="nav-item"><a href="nutrition.html" class="nav-link">Nutrition</a></li>
+          <li class="nav-item"><a href="progress.html" class="nav-link">Progress</a></li>
+          <li class="nav-item"><a href="resources.html" class="nav-link">Resources</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="faq.html" class="nav-link">FAQ</a></li>
+          <li class="nav-item ms-lg-2"><a href="contact.html" class="btn btn-primary">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="flex-grow-1">
+    <section class="container py-5 calendar-content">
+      <h1 class="mb-3">Weekly Planner</h1>
+      <p class="lead mb-4">Turn your program into actual sessions across the week.</p>
+
+      <div
+        id="program-banner"
+        class="alert alert-info d-flex flex-wrap justify-content-between align-items-center mb-4 d-none"
+        style="background: rgba(13,110,253,0.12); border-color: rgba(13,110,253,0.5); color:#ffffff;">
+        <div class="mb-2 mb-md-0">
+          <strong>Selected program:</strong>
+          <span id="sel-prog-name" class="fw-semibold">None</span>
+        </div>
+        <div class="d-flex gap-2 flex-wrap">
+          <button
+            type="button"
+            class="btn btn-sm btn-primary"
+            onclick="applySelectedProgram()">
+            Load into this week
+          </button>
+          <button
+            type="button"
+            class="btn btn-sm btn-outline-light"
+            onclick="preplanFullProgram()">
+            Preplan full program
+          </button>
+          <button
+            type="button"
+            class="btn btn-sm btn-outline-light"
+            id="btn-clear-program">
+            Clear selection
+          </button>
+        </div>
+      </div>
+
+      <ul class="nav nav-tabs" id="planTabs" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link active"
+            id="template-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#template"
+            type="button"
+            role="tab">
+            Template Week
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            id="myweek-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#myweek"
+            type="button"
+            role="tab">
+            My Week
+          </button>
+        </li>
+      </ul>
+
+      <div class="tab-content pt-3">
+        <div
+          class="tab-pane fade show active"
+          id="template"
+          role="tabpanel"
+          aria-labelledby="template-tab">
+          <div class="row g-4" id="template-week">
+            <div class="col-md-4">
+              <div class="card calendar-card h-100">
+                <div class="card-body">
+                  <h5 class="mb-2">Mon</h5>
+                  <ul class="small mb-0">
+                    <li>Speed / Acceleration</li>
+                    <li>Core Stability</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card calendar-card h-100">
+                <div class="card-body">
+                  <h5 class="mb-2">Wed</h5>
+                  <ul class="small mb-0">
+                    <li>Vertical Jump / Plyometrics</li>
+                    <li>Posterior Chain Strength</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card calendar-card h-100">
+                <div class="card-body">
+                  <h5 class="mb-2">Fri</h5>
+                  <ul class="small mb-0">
+                    <li>Mobility &amp; Stretch</li>
+                    <li>Recovery / Light Shooting</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="tab-pane fade"
+          id="myweek"
+          role="tabpanel"
+          aria-labelledby="myweek-tab">
+          <div class="d-flex justify-content-between align-items-center mt-3 mb-2 flex-wrap gap-2">
+            <div class="d-flex gap-2">
+              <button class="btn btn-sm btn-outline-light" onclick="changeWeek(-1)">← Prev week</button>
+              <button class="btn btn-sm btn-outline-light" onclick="changeWeek(1)">Next week →</button>
+            </div>
+            <span id="week-label" class="badge bg-light text-dark px-3 py-2">Week 1</span>
+          </div>
+
+          <p class="text-muted small mb-2">
+            Drag drills between days, mark them as done, and switch weeks to plan further ahead.
+          </p>
+
+          <div id="week-grid" class="row g-3"></div>
+
+          <div class="mt-3 d-flex gap-2">
+            <button class="btn btn-outline-secondary" onclick="clearPlan()">Clear this week</button>
+            <button class="btn btn-primary" onclick="window.print()">Print / Export</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="mt-auto py-4 bg-dark text-white">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+      <p class="mb-2 mb-md-0">© 2025 HoopLab</p>
+      <ul class="list-inline mb-0">
+        <li class="list-inline-item"><a class="link-light" href="faq.html">FAQ</a></li>
+        <li class="list-inline-item"><a class="link-light" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/script.js" defer></script>
+</body>
+</html>
